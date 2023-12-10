@@ -1,0 +1,7 @@
+.okay-btn {
+  padding: 5px 15px;
+  background-color: crimson;
+  color: white;
+  box-shadow: 0 0 3px 1px crimson;
+  font-size: 1rem;
+}

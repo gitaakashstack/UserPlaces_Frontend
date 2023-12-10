@@ -1,0 +1,79 @@
+.add-place-form {
+  position: relative;
+  top: var(--top-position);
+  background-color: white;
+  width: 80%;
+  min-width: 450px;
+  margin: 0 auto 200px;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 5px 5px rgb(0, 0, 0);
+  overflow: hidden;
+}
+
+.add-place-form .input-wrapper {
+  margin: 15px 0;
+}
+.add-place-form input,
+.add-place-form textarea {
+  display: block;
+  padding: 5px;
+  outline: none;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.add-place-form input:focus,
+.add-place-form textarea:focus {
+  border: 2px solid black;
+}
+
+.add-place-form label {
+  font-weight: 600;
+}
+.add-place-form .warning-msg-container {
+  height: 30px;
+}
+
+.add-place-form .warning-msg {
+  background-color: red;
+  color: white;
+  font-weight: 500;
+  font-size: 0.8rem;
+  padding: 5px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+.add-place-form .warning_block-enter {
+  transform: translateY(-100%);
+}
+
+.add-place-form .warning_block-enter-active {
+  transition: transform 0.4s ease-out;
+  transform: translateY(0);
+}
+
+.add-place-form .warning_block-exit {
+  transform: translateY(0);
+}
+
+.add-place-form .warning_block-exit-active {
+  transition: transform 0.4s ease-out;
+  transform: translateY(-100%);
+}
+
+.add-place-form .add-place-btn {
+  padding: 5px 15px;
+  background-color: crimson;
+  color: white;
+  box-shadow: 0 0 3px 1px crimson;
+  font-size: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .add-place-form {
+    width: 50%;
+  }
+}

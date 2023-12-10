@@ -1,0 +1,31 @@
+.center-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.center-container > .center {
+  width: max-content;
+  max-width: 400px;
+  border-radius: 10px;
+  text-align: center;
+  padding: 50px;
+  background-color: orange;
+  font-size: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .center-container > .center {
+    width: 60%;
+    max-width: unset;
+    border-radius: 10px;
+    text-align: center;
+    padding: 50px;
+  }
+}

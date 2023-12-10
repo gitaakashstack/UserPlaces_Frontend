@@ -1,0 +1,74 @@
+.place-item {
+  background-color: white;
+  text-align: center;
+}
+
+.place-item > .place-img-container {
+  width: 100%;
+  height: 300px;
+}
+
+.place-item > .place-img-container > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.place-item > .img-details {
+  margin: 10px 0;
+  padding-bottom: 10px;
+  border-bottom: 0.5px solid gray;
+}
+
+.place-item > .img-btns {
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.place-item > .img-btns > .map-btn,
+.modal-content .cancel-del-modal-btn {
+  padding: 5px 15px;
+  color: indianred;
+  box-shadow: 0 0 3px 1px indianred;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.place-item > .img-btns > .edit-btn {
+  padding: 5px 15px;
+  background-color: crimson;
+  color: white;
+  box-shadow: 0 0 3px 1px crimson;
+  font-size: 1rem;
+}
+
+.place-item > .img-btns > .del-btn {
+  padding: 5px 15px;
+  display: block;
+  font-size: 1rem;
+  font-family: inherit;
+  background-color: darkred;
+  color: white;
+  box-shadow: 0 0 3px 1px darkred;
+}
+
+.modal-content .close-map-btn,
+.modal-content .del-place-btn {
+  padding: 5px 15px;
+  display: block;
+  background-color: crimson;
+  box-shadow: 0 0 3px 1px crimson;
+  font-size: 1rem;
+  font-family: inherit;
+  color: white;
+}
+
+@media only screen and (min-width: 768px) {
+  .place-item > .place-img-container {
+    width: 100%;
+    height: 300px;
+  }
+}

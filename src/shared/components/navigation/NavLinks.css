@@ -1,0 +1,13 @@
+.navlinks a {
+  text-decoration: none;
+  color: white;
+}
+
+.navlinks .navlink-active {
+  background-color: var(--yellow-color);
+  color: black;
+}
+
+.navlinks .logout-link {
+  border: 1px solid white;
+}

@@ -1,0 +1,44 @@
+.user-list {
+  position: relative;
+  top: var(--top-position);
+  width: 80%;
+  min-width: 450px;
+  margin: 0 auto;
+  padding: 10px;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  justify-items: center;
+  gap: 20px;
+}
+
+.user-list .loading-appear {
+  opacity: 0;
+}
+
+.user-list .loading-appear-active {
+  opacity: 1;
+  transition: all 1s linear;
+}
+
+.user-list .loading-appear-done {
+  opacity: 1;
+}
+
+.error-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.3rem;
+  color: white;
+}
+
+@media only screen and (min-width: 768px) {
+  .user-list {
+    width: 70%;
+    min-width: 650px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

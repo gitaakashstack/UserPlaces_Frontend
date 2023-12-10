@@ -1,24 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Fragment, useContext, useEffect } from "react";
+import { Routes, Route, Outlet } from "react-router-dom";
+import NavBar from "./shared/components/navigation/NavBar";
+import Places from "./places/pages/Places";
+import NewPlace from "./places/pages/NewPlace";
+import Users from "./users/pages/Users";
+import LogIn from "./users/pages/LogIn";
+import UpdatePlace from "./places/pages/UpdatePlace";
+import authContext from "./store/authContext";
 
 function App() {
+  const { loggingInHandler, loggingOutHandler } = useContext(authContext);
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    const userID = localStorage.getItem("userID");
+    if (token) {
+      const tokenExpTime = parseInt(localStorage.getItem("tokenExpTime"));
+      if (Date.now() >= tokenExpTime) loggingOutHandler();
+      else loggingInHandler(userID, token);
+    }
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <NavBar />
+      <Routes>
+        <Route path="/api/places" element={<Outlet />}>
+          <Route path="user/:userID" element={<Places />} />
+          <Route path="" element={<NewPlace />} />
+          <Route path=":placeID" element={<UpdatePlace />} />
+        </Route>
+        <Route path="/api/users" element={<Outlet />}>
+          <Route path="" element={<Users />} />
+          <Route path="auth" element={<LogIn />} />
+        </Route>
+      </Routes>
+    </Fragment>
   );
 }
 

@@ -1,0 +1,43 @@
+.user-item-container {
+  background-color: black;
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  align-items: center;
+  border-radius: 10px;
+  transition: all 0.5s linear;
+}
+
+.user-item-container:hover {
+  background-color: var(--yellow-color);
+  cursor: pointer;
+}
+
+.user-item-container .avatar {
+  width: 70px;
+  height: 70px;
+}
+
+.user-item-container .avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-item-container .user-info .user-name {
+  color: var(--yellow-color);
+}
+
+.user-item-container .user-info .place-count {
+  color: white;
+}
+
+.user-item-container:hover .user-name {
+  color: black;
+}
+
+.user-item-container:hover .place-count {
+  color: black;
+}

@@ -1,0 +1,23 @@
+.top-navlinks {
+  display: none;
+}
+.top-navlinks > li > a {
+  padding: 10px 15px;
+  transition: all 0.3s linear;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.top-navlinks > li > a:hover {
+  background-color: var(--yellow-color);
+  color: black;
+}
+
+@media only screen and (min-width: 768px) {
+  .top-navlinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+  }
+}
